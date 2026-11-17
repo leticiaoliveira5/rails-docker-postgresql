@@ -298,7 +298,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   brakeman
   capybara (>= 3.40)
-  debug (>= 1.11.1)
+  debug
   factory_bot_rails (= 6.5.1)
   faker
   jbuilder (~> 2.7)

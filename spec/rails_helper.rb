@@ -27,9 +27,12 @@ require 'rspec/rails'
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
+  # rubocop:disable RSpec/Output
   puts e.to_s.strip
   exit 1
+  # rubocop:enable RSpec/Output
 end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [Rails.root.join('spec/fixtures')]
