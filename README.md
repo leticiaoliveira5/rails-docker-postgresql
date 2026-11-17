@@ -3,9 +3,8 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu risus varius eros vulputate placerat ac id nisl. Fusce ac ultricies sapien. Nunc auctor, libero eu varius luctus, velit justo sodales turpis, sit amet dictum massa tellus ac justo. Proin consectetur, purus et euismod accumsan, eros velit aliquam arcu, et dapibus neque quam at leo. 
 
 ## Principais ferramentas
-- Ruby (v3.1.3)
-- Rails (v7.0.4)
-- Devise (v4.8.1)
+- Ruby (v4.0.9)
+- Rails (v8.0.5)
 - PostgreSQL
 - GitHub Actions
 

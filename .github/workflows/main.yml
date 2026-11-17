@@ -28,10 +28,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Set up Ruby 3.1.3
-        uses: ruby/setup-ruby@v1.127.0
+      - name: Set up Ruby 4.0.9
+        uses: ruby/setup-ruby@v1.338.0
         with:
-          ruby-version: 3.1.3
+          ruby-version: 4.0.9
           bundler-cache: true
       - name: Run tests
         env:
@@ -48,16 +48,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Curl rubocop.yml
-        run: curl https://raw.githubusercontent.com/leticiaoliveira5/code-style/master/.rubocop.3.1.3.yml -o .rubocop.yml
-      - name: Set up Ruby 3.1.3
-        uses: ruby/setup-ruby@v1.127.0
+      - name: Set up Ruby 4.0.9
+        uses: ruby/setup-ruby@v1.338.0
         with:
-          ruby-version: 3.1.3
+          ruby-version: 4.0.9
           bundler-cache: true
-      - name: run rubocop
-        uses: reviewdog/action-rubocop@v2.3.0
+
+      - name: Run rubocop
+        uses: reviewdog/action-rubocop@v2.23.0
         with:
           rubocop_version: gemfile
-          rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
+          rubocop_extensions: 'rubocop-rails rubocop-rspec'
           reporter: github-pr-check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
