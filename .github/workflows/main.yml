@@ -56,7 +56,7 @@ jobs:
           ruby-version: 4.0.9
           bundler-cache: true
       - name: run rubocop
-        uses: reviewdog/action-rubocop@v2.3.0
+        uses: reviewdog/action-rubocop@v2.23.0
         with:
           rubocop_version: gemfile
           rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
