@@ -1,2 +1,0 @@
-inherit_from: 
-  - https://raw.githubusercontent.com/leticiaoliveira5/code-style/master/.rubocop.yml

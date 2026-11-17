@@ -329,9 +329,9 @@ DEPENDENCIES
   rack-cors
   rails (= 8.0.5.2)
   rspec-rails (= 8.1.0)
-  rubocop (~> 1.60)
-  rubocop-rails (~> 2.24)
-  rubocop-rspec (~> 2.26)
+  rubocop
+  rubocop-rails
+  rubocop-rspec
   simplecov (~> 0.21.2)
   tzinfo-data
   web-console (>= 4.1.0)
