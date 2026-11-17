@@ -55,9 +55,12 @@ jobs:
         with:
           ruby-version: 4.0.9
           bundler-cache: true
-      - name: run rubocop
-        uses: reviewdog/action-rubocop@v2.23.0
+
+      - name: Run rubocop
+        uses: reviewdog/action-rubocop@v2.13.0
         with:
-          rubocop_version: gemfile
-          rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
+          rubocop_version: '1.60.2'
+          rubocop_extensions: 'rubocop-rails rubocop-rspec'
           reporter: github-pr-check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
