@@ -7,9 +7,9 @@
 name: "Main Workflow"
 on:
   push:
-    branches: [ master, main, dev ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, main, dev ]
+    branches: [ master ]
 jobs:
   rspec:
     runs-on: ubuntu-latest
